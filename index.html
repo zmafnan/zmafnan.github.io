@@ -1,73 +1,531 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="description" content="Zikri Afnan - Full Stack Developer, Data Scientist, Machine Learning Engineer">
+    <meta name="author" content="Zikri Afnan">
     <link rel="shortcut icon" href="assets/images/test.jpg">
 
-    <title>Zikri Afnan</title>
-    <!-- Font -->
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@450" />
-    <!-- Icon -->
+    <title>Zikri Afnan | Full Stack & ML Engineer</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
     <link rel="stylesheet" href="assets/vendor/icomoon/icomoon-free.css">
-    <!-- Other -->
+    
+    <!-- Bootstrap -->
     <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
     <link href="assets/css/main.css" rel="stylesheet">
-    <link href="assets/css/simple-anim.css" rel="stylesheet">
+    <link href="assets/css/animations.css" rel="stylesheet">
 </head>
 
 <body>
+    <!-- Particles Background -->
     <div id="particles-js"></div>
-    <div class="main-content">
-        <div class="container">
-            <img class="img-profile sa outGone" src="assets/images/profile1.jpg" alt="profile">
-            <p class="main-text sa outGone">Zikri Afnan</p>
-            <p class="second-text sa outGone">zmafnan</p>
-            <p class="alter-text mt-0">
-                Android Developer<br>
-                Backend Developer<br>
-                Data Scientist<br>
-                Machine Learning Engineer<br><br>
-            
-                Indonesia - Bandung<br>
-                Lean Staff PT Metro Pearl Indonesia
-            </p>
-            <div class=" social-icon sa bottomToTop">
-                <li><a href="https://github.com/zmafnan"><i class="icon icon-github"></i></a></li>
-                <li><a href="https://www.instagram.com/zmafnan" target="_blank"><i class="icon icon-instagram"></i></a>
-                </li>
-                <li><a href="https://t.me/zmafnan" target="_blank"><i class="icon icon-telegram"></i></a></li>
-                <li><a href="https://www.linkedin.com/in/zikri-afnan-7a67b1198/" target="_blank"><i
-                            class="icon icon-linkedin"></i></a></li>
-                <li><a href="https://www.facebook.com/zikrimuhammad.afnan/" target="_blank"><i
-                            class="icon icon-facebook"></i></a></li>
-                <li><a href="https://wa.me/+6281322081946" target="_blank"><i class="icon icon-whatsapp"></i></a></li>
-                <li><a href="https://twitter.com/afnan_zikri" target="_blank"><i class="icon icon-twitter"></i></a></li>
-            </div> 
-        </div>    
-    </div>
     
-    <div class="footer">
-       <p>Bachelor's Degree in Computer Science from General Achmad Yani University<br></p>
-        <p>&copy; Zikri Afnan
-            <script>
-                document.write(new Date().getFullYear());
-            </script>
-        </p>
-    </div>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">ZA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="animate fadeInUp">Zikri Afnan</h1>
+                    <h2 class="animate fadeInUp delay-1">@zmafnan</h2>
+                    <div class="typewriter animate fadeInUp delay-2">
+                        <span id="typewriter-text"></span>
+                    </div>
+                    <p class="hero-tagline animate fadeInUp delay-2">Full-stack developer with expertise in machine learning and data science, creating innovative solutions to complex problems.</p>
+                    <div class="hero-buttons animate fadeInUp delay-3">
+                        <a href="#contact" class="btn btn-primary">Contact Me</a>
+                        <a href="https://github.com/zmafnan" target="_blank" class="btn btn-outline">GitHub Profile</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <div class="profile-container animate fadeInRight">
+                        <div class="profile-glow"></div>
+                        <img class="profile-image" src="assets/images/profile1.jpg" alt="Zikri Afnan">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h3>Hello, I'm Zikri!</h3>
+                        <p>I'm a passionate tech professional based in Bandung, Indonesia, currently working as a Lean Staff at PT Metro Pearl Indonesia.</p>
+                        <p>With expertise in Machine Learning, Data Science, and Full-Stack Development, I bring a diverse skill set to solve complex problems and create innovative solutions.</p>
+                        <p>I hold a Bachelor's Degree in Computer Science from General Achmad Yani University and am constantly expanding my knowledge in the ever-evolving tech landscape.</p>
+                        <div class="about-info">
+                            <div class="info-item">
+                                <span class="info-title">Location:</span>
+                                <span class="info-value">Bandung, Indonesia</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-title">Email:</span>
+                                <span class="info-value">zikriafnan.dev@gmail.com</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-title">Position:</span>
+                                <span class="info-value">Lean Staff at PT Metro Pearl Indonesia</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-title">Education:</span>
+                                <span class="info-value">B.S. Computer Science, General Achmad Yani University</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="experience-cards">
+                        <div class="exp-card animate fadeInUp">
+                            <div class="exp-icon">
+                                <i class="icon icon-lab"></i>
+                            </div>
+                            <div class="exp-content">
+                                <h4>Machine Learning</h4>
+                                <p>Developing and deploying machine learning models to solve real-world problems and automate processes.</p>
+                            </div>
+                        </div>
+                        <div class="exp-card animate fadeInUp delay-1">
+                            <div class="exp-icon">
+                                <i class="icon icon-stats-dots"></i>
+                            </div>
+                            <div class="exp-content">
+                                <h4>Data Science</h4>
+                                <p>Analyzing and interpreting complex data sets to drive insights and inform business decisions.</p>
+                            </div>
+                        </div>
+                        <div class="exp-card animate fadeInUp delay-2">
+                            <div class="exp-icon">
+                                <i class="icon icon-embed2"></i>
+                            </div>
+                            <div class="exp-content">
+                                <h4>Full-Stack Development</h4>
+                                <p>Building complete web applications with modern frontend and backend technologies.</p>
+                            </div>
+                        </div>
+                        <div class="exp-card animate fadeInUp delay-3">
+                            <div class="exp-icon">
+                                <i class="icon icon-mobile"></i>
+                            </div>
+                            <div class="exp-content">
+                                <h4>Android Development</h4>
+                                <p>Creating native Android applications with Kotlin and Java, implementing modern architecture patterns.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2>My Skills</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="skills-category">
+                        <h3>Programming Languages</h3>
+                        <div class="skill-bars">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Python</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>JavaScript</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Java</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Kotlin</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="skills-category">
+                        <h3>Frameworks & Libraries</h3>
+                        <div class="skill-bars">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>TensorFlow</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Django</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>ReactJS</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>NodeJS/ExpressJS</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-6">
+                    <div class="skills-category">
+                        <h3>Machine Learning & Data Science</h3>
+                        <div class="skill-bars">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Data Analysis</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Predictive Modeling</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Computer Vision</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>NLP</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="skills-category">
+                        <h3>Databases & Cloud</h3>
+                        <div class="skill-bars">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>PostgreSQL</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>MySQL</span>
+                                    <span>80%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>MongoDB</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span>Google Cloud</span>
+                                    <span>70%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 70%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="skills-cloud">
+                        <div class="skill-tag">TensorFlow</div>
+                        <div class="skill-tag">PyTorch</div>
+                        <div class="skill-tag">Scikit-learn</div>
+                        <div class="skill-tag">Django</div>
+                        <div class="skill-tag">ReactJS</div>
+                        <div class="skill-tag">ExpressJS</div>
+                        <div class="skill-tag">NodeJS</div>
+                        <div class="skill-tag">CodeIgniter</div>
+                        <div class="skill-tag">Laravel</div>
+                        <div class="skill-tag">Android</div>
+                        <div class="skill-tag">Kotlin</div>
+                        <div class="skill-tag">Java</div>
+                        <div class="skill-tag">Python</div>
+                        <div class="skill-tag">JavaScript</div>
+                        <div class="skill-tag">Microsoft Azure</div>
+                        <div class="skill-tag">Google Cloud</div>
+                        <div class="skill-tag">PostgreSQL</div>
+                        <div class="skill-tag">MySQL</div>
+                        <div class="skill-tag">MongoDB</div>
+                        <div class="skill-tag">SQLite</div>
+                        <div class="skill-tag">Machine Learning</div>
+                        <div class="skill-tag">Data Science</div>
+                        <div class="skill-tag">REST API</div>
+                        <div class="skill-tag">Git</div>
+                        <div class="skill-tag">Postgre</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>My Projects</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="github-section">
+                        <div class="github-card">
+                            <div class="github-header">
+                                <i class="icon icon-github"></i>
+                                <h3>Check Out My Awesome Projects</h3>
+                            </div>
+                            <p>I maintain a collection of public repositories showcasing my development skills and technical expertise.</p>
+                            <p>My GitHub profile features various projects including:</p>
+                            <ul class="text-start">
+                                <li>Web applications with modern frameworks</li>
+                                <li>Mobile app development for Android</li>
+                                <li>Backend API implementations</li>
+                                <li>Utility tools and libraries</li>
+                                <li>Open source contributions</li>
+                            </ul>
+                            <div class="text-center mt-4">
+                                <a href="https://github.com/zmafnan" target="_blank" class="btn btn-primary">
+                                    <i class="icon icon-github"></i> View My GitHub Profile
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="icon icon-location"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>Bandung, Indonesia</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="icon icon-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>zikriafnan.dev@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="icon icon-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>+62 813 2208 1946</p>
+                            </div>
+                        </div>
+                        <div class="social-links">
+                            <a href="https://github.com/zmafnan" class="social-link">
+                                <i class="icon icon-github"></i>
+                            </a>
+                            <a href="https://www.instagram.com/zmafnan" class="social-link">
+                                <i class="icon icon-instagram"></i>
+                            </a>
+                            <a href="https://t.me/zmafnan" class="social-link">
+                                <i class="icon icon-telegram"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/zikri-afnan-7a67b1198/" class="social-link">
+                                <i class="icon icon-linkedin"></i>
+                            </a>
+                            <a href="https://www.facebook.com/zikrimuhammad.afnan/" class="social-link">
+                                <i class="icon icon-facebook"></i>
+                            </a>
+                            <a href="https://wa.me/+6281322081946" class="social-link">
+                                <i class="icon icon-whatsapp"></i>
+                            </a>
+                            <a href="https://twitter.com/afnan_zikri" class="social-link">
+                                <i class="icon icon-twitter"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Subject">
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="5" placeholder="Your Message" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Zikri Afnan</h3>
+                    <p>Full Stack Developer | Data Scientist | Machine Learning Engineer</p>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; <span id="year"></span> Zikri Afnan. All Rights Reserved.</p>
+                    <p>Bachelor's Degree in Computer Science from General Achmad Yani University</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="icon icon-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
     <script src="assets/vendor/jquery/jquery.min.js"></script>
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Particles JS -->
-    <!-- https://github.com/VincentGarreau/particles.js -->
     <script src="assets/vendor/particles/particles.min.js"></script>
     <script src="assets/vendor/particles/particles-conf.js"></script>
-
+    <script src="assets/js/main.js"></script>
 </body>
-
 </html>
