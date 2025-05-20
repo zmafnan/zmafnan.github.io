@@ -22,6 +22,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   })
 
+  // Back to top button click event
+  backToTopButton.addEventListener("click", (e) => {
+    e.preventDefault()
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    })
+  })
+
   // Smooth scrolling for anchor links
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
@@ -44,6 +53,23 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     })
   })
+
+  // Fix mobile navbar toggle
+  const navbarToggler = document.querySelector(".navbar-toggler")
+  const navbarCollapse = document.querySelector(".navbar-collapse")
+
+  if (navbarToggler && navbarCollapse) {
+    navbarToggler.addEventListener("click", () => {
+      navbarCollapse.classList.toggle("show")
+    })
+
+    // Close navbar when a nav item is clicked
+    document.querySelectorAll(".nav-link").forEach((link) => {
+      link.addEventListener("click", () => {
+        navbarCollapse.classList.remove("show")
+      })
+    })
+  }
 
   // Typewriter effect
   const typewriterElement = document.getElementById("typewriter-text")
