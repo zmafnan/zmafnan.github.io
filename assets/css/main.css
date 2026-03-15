@@ -1,20 +1,22 @@
 /* Base Styles */
 :root {
-  --primary-color: #4361ee;
-  --secondary-color: #3a0ca3;
-  --accent-color: #4cc9f0;
-  --dark-color: #121212;
+  --primary-color: #00f0ff; /* Neon Cyan */
+  --secondary-color: #7000ff; /* Deep Violet */
+  --accent-color: #ff003c; /* Cyberpunk Red/Pink */
+  --dark-color: #050505;
+  --dark-surface: #0a0a0f;
   --light-color: #f8f9fa;
-  --text-color: #333;
-  --text-light: #f8f9fa;
-  --text-muted: #6c757d;
-  --border-color: rgba(255, 255, 255, 0.1);
-  --card-bg: rgba(255, 255, 255, 0.05);
-  --card-bg-hover: rgba(255, 255, 255, 0.1);
-  --gradient-primary: linear-gradient(135deg, #4361ee, #3a0ca3);
-  --gradient-accent: linear-gradient(135deg, #4cc9f0, #4361ee);
-  --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  --transition: all 0.3s ease;
+  --text-color: #e0e6ed;
+  --text-light: #ffffff;
+  --text-muted: #8892b0;
+  --border-color: rgba(0, 240, 255, 0.15);
+  --card-bg: rgba(10, 10, 15, 0.6);
+  --card-bg-hover: rgba(0, 240, 255, 0.05);
+  --gradient-primary: linear-gradient(135deg, #00f0ff, #7000ff);
+  --gradient-accent: linear-gradient(135deg, #ff003c, #7000ff);
+  --box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  --neon-glow: 0 0 10px rgba(0, 240, 255, 0.5), 0 0 20px rgba(0, 240, 255, 0.3);
+  --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 html {
@@ -22,8 +24,8 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  color: var(--text-light);
+  font-family: "Space Grotesk", sans-serif;
+  color: var(--text-color);
   background-color: var(--dark-color);
   line-height: 1.6;
   overflow-x: hidden;
@@ -70,12 +72,12 @@ a:hover {
 }
 
 .navbar-brand {
+  font-family: "Orbitron", sans-serif;
   font-weight: 700;
   font-size: 1.8rem;
-  color: var(--accent-color);
-  background: var(--gradient-accent);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--primary-color);
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.5);
+  letter-spacing: 2px;
 }
 
 .nav-link {
@@ -161,12 +163,16 @@ a:hover {
 }
 
 .hero-content h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
+  font-family: "Orbitron", sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
   margin-bottom: 0.5rem;
   background: var(--gradient-primary);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 8px rgba(0, 240, 255, 0.4));
+  letter-spacing: 2px;
 }
 
 .hero-content h2 {
@@ -219,13 +225,14 @@ a:hover {
 
 @keyframes pulse {
   0% {
-    box-shadow: 0 0 25px rgba(76, 201, 240, 0.8);
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.5);
   }
   50% {
-    box-shadow: 0 0 35px rgba(76, 201, 240, 0.6);
+    box-shadow: 0 0 45px rgba(112, 0, 255, 0.6);
+    border-color: var(--secondary-color);
   }
   100% {
-    box-shadow: 0 0 25px rgba(76, 201, 240, 0.8);
+    box-shadow: 0 0 25px rgba(0, 240, 255, 0.5);
   }
 }
 
@@ -256,9 +263,9 @@ a:hover {
 }
 
 .btn-primary:hover {
-  background: var(--gradient-accent);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: var(--gradient-primary);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: var(--neon-glow);
 }
 
 .btn-outline {
@@ -268,10 +275,10 @@ a:hover {
 }
 
 .btn-outline:hover {
-  background: var(--accent-color);
-  color: var(--dark-color);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: rgba(0, 240, 255, 0.1);
+  color: var(--primary-color);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: var(--neon-glow);
 }
 
 .btn-sm {
@@ -306,12 +313,15 @@ a:hover {
 }
 
 .section-header h2 {
-  font-size: 2.5rem;
+  font-family: "Orbitron", sans-serif;
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
   position: relative;
   display: inline-block;
-  color: #ffffff; /* Keep white for contrast */
+  color: var(--primary-color);
+  text-shadow: 0 0 15px rgba(0, 240, 255, 0.3);
+  letter-spacing: 2px;
 }
 
 .section-divider {
@@ -364,9 +374,10 @@ a:hover {
 }
 
 .exp-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) scale(1.02);
   background: var(--card-bg-hover);
-  box-shadow: var(--box-shadow);
+  box-shadow: var(--neon-glow);
+  border-color: var(--primary-color);
 }
 
 .exp-icon {
@@ -391,7 +402,8 @@ a:hover {
 .skills-category h3 {
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
-  color: #4cc9f0; /* Changed to bright blue */
+  color: var(--primary-color);
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.3);
 }
 
 .skill-bars {
@@ -409,7 +421,7 @@ a:hover {
 }
 
 .skill-info span {
-  color: #4cc9f0; /* Changed to bright blue */
+  color: var(--primary-color);
 }
 
 .skill-bar {
@@ -422,12 +434,13 @@ a:hover {
 
 .skill-progress {
   height: 100%;
-  background: linear-gradient(90deg, #4cc9f0, #4361ee);
+  background: var(--gradient-primary);
   border-radius: 5px;
   position: absolute;
   top: 0;
   left: 0;
   transition: width 1.5s ease-in-out;
+  box-shadow: 0 0 10px var(--primary-color);
 }
 
 .skills-cloud {
@@ -439,18 +452,20 @@ a:hover {
 }
 
 .skill-tag {
-  background: rgba(76, 201, 240, 0.1);
-  color: #4cc9f0; /* Changed to bright blue */
+  background: rgba(0, 240, 255, 0.05);
+  color: var(--primary-color);
   padding: 0.5rem 1rem;
   border-radius: 50px;
   font-size: 0.9rem;
   transition: var(--transition);
-  border: 1px solid rgba(76, 201, 240, 0.3);
+  border: 1px solid rgba(0, 240, 255, 0.2);
 }
 
 .skill-tag:hover {
-  background: rgba(76, 201, 240, 0.2);
-  transform: translateY(-3px);
+  background: rgba(0, 240, 255, 0.15);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: var(--neon-glow);
+  border-color: var(--primary-color);
 }
 
 /* Backend Expertise Section */
@@ -527,7 +542,7 @@ a:hover {
 
 .github-card ul li {
   margin-bottom: 0.5rem;
-  color: #e0e0e0;
+  color: var(--text-color);
   text-align: left;
 }
 
@@ -573,7 +588,7 @@ a:hover {
 
 .github-card ul li {
   margin-bottom: 0.5rem;
-  color: #e0e0e0;
+  color: var(--text-color);
 }
 
 /* Contact Section */
@@ -654,19 +669,20 @@ a:hover {
 }
 
 .form-control:focus {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: var(--accent-color);
-  box-shadow: none;
+  background: rgba(0, 240, 255, 0.1);
+  border-color: var(--primary-color);
+  box-shadow: var(--neon-glow);
   color: var(--text-light);
 }
 
 .form-control::placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(224, 230, 237, 0.6);
 }
 
 /* Footer */
 .footer {
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--dark-surface);
+  border-top: 1px solid var(--border-color);
   padding: 3rem 0 1rem;
   position: relative;
   backdrop-filter: blur(10px);
@@ -724,8 +740,9 @@ a:hover {
 }
 
 .back-to-top:hover {
-  background: var(--gradient-accent);
+  background: var(--gradient-primary);
   transform: translateY(-5px);
+  box-shadow: var(--neon-glow);
 }
 
 /* Responsive Styles */
